@@ -11,7 +11,6 @@ public class RestaurantService {
                 return restaurant;
         }
         throw new restaurantNotFoundException("Restaurant '"+restaurantName+"' is not found.");
-
     }
 
 
@@ -28,6 +27,6 @@ public class RestaurantService {
     }
 
     public List<Restaurant> getRestaurants() {
-        return this.restaurants;
+        return restaurants;
     }
 }

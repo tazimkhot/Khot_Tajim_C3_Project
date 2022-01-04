@@ -35,7 +35,6 @@ class RestaurantTest {
         Mockito.when(spiedRestaurant.getCurrentTime()).thenReturn(insideOpeningHrs);
 
         assertTrue(spiedRestaurant.isRestaurantOpen());
-
         //WRITE UNIT TEST CASE HERE
     }
 
@@ -48,7 +47,6 @@ class RestaurantTest {
         Mockito.when(spiedRestaurant.getCurrentTime()).thenReturn(OutSideOpeningHrs);
 
         assertFalse(spiedRestaurant.isRestaurantOpen());
-
     }
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
