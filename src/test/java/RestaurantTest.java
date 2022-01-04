@@ -75,4 +75,29 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>Order Value<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void On_Selecting_SweetCornSoup_And_VegetableLasagne_The_Order_Value_Should_Be_Equal_To_388(){
+        List<String> selectItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        //List<String> selectItems = Arrays.asList("Sweet corn soup");
+
+        int totalOrderValue = restaurant.getOrderValue(selectItems);
+
+        assertEquals(totalOrderValue, 388);
+
+    }
+
+    @Test
+    public void On_Selecting_Nothing_The_Order_Value_Should_Be_Equal_To_0(){
+        List<String> selectItems =null;
+        //List<String> selectItems = Arrays.asList("Sweet corn soup");
+
+        int totalOrderValue = restaurant.getOrderValue(selectItems);
+
+        assertEquals(totalOrderValue, 0);
+
+    }
+
+    //<<<<<<<<<<<<<<<<<<<<<<<Order Value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 }
